@@ -1,6 +1,18 @@
 {
   "cleanUrls": true,
   "trailingSlash": true,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/windows.html", "destination": "/windows/", "permanent": true },
+    { "source": "/window-installation.html", "destination": "/window-installation/", "permanent": true },
+    { "source": "/home-windows.html", "destination": "/home-windows/", "permanent": true },
+    { "source": "/double-hung-windows.html", "destination": "/double-hung-windows/", "permanent": true },
+    { "source": "/doors.html", "destination": "/doors/", "permanent": true },
+    { "source": "/gallery.html", "destination": "/gallery/", "permanent": true },
+    { "source": "/reviews.html", "destination": "/reviews/", "permanent": true },
+    { "source": "/about.html", "destination": "/about/", "permanent": true },
+    { "source": "/contact.html", "destination": "/contact/", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/windows/", "destination": "/windows.html" },
     { "source": "/window-installation/", "destination": "/window-installation.html" },
@@ -32,6 +44,24 @@
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/JustWindowsUSA Project Overview.pdf",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/README.md",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
         }
       ]
     }

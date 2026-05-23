@@ -1,4 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
-Sitemap: https://www.justwindowsusa.com/sitemap.xml
+Sitemap: https://just-windows-usa.vercel.app/sitemap.xml
