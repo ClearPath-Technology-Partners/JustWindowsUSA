@@ -12,7 +12,8 @@
       content="Just Windows USA provides window installation, replacement home windows, energy efficient window options, entry doors, and patio doors in Mentor, OH."
     >
     <link rel="canonical" href="https://just-windows-usa.vercel.app/">
-    <link rel="preload" href="/assets/gallery/just-windows-content-home-01-1920w-1-e1714686945999.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="/assets/gallery/just-windows-content-home-02-1920w-1-e1714687004282.webp" as="image" media="(max-width: 700px)" fetchpriority="high">
+    <link rel="preload" href="/assets/gallery/just-windows-content-home-01-1920w-1-e1714686945999.webp" as="image" media="(min-width: 701px)" fetchpriority="high">
     <link rel="stylesheet" href="/styles.min.css">
     <script defer src="/script.min.js"></script>
     <script type="application/ld+json">
@@ -167,16 +168,16 @@
             </p>
             <div class="badge-row" aria-label="Accreditations and product brands">
               <a href="https://www.bbb.org/" target="_blank" rel="noopener" aria-label="Visit the Better Business Bureau website">
-                <img src="/assets/bbb-rating.png" alt="BBB Accredited Business A+ rating">
+                <img loading="lazy" decoding="async" src="/assets/bbb-rating.png" alt="BBB Accredited Business A+ rating">
               </a>
               <a href="https://www.andersenwindows.com/" target="_blank" rel="noopener" aria-label="Visit Andersen Windows">
-                <img src="/assets/andersen-windows-doors.png" alt="Andersen Windows and Doors logo">
+                <img loading="lazy" decoding="async" src="/assets/andersen-windows-doors.png" alt="Andersen Windows and Doors logo">
               </a>
               <a href="https://polariswindows.com/" target="_blank" rel="noopener" aria-label="Visit Polaris Windows and Doors">
-                <img src="/assets/polaris-windows-doors.png" alt="Polaris Windows and Doors logo">
+                <img loading="lazy" decoding="async" src="/assets/polaris-windows-doors.png" alt="Polaris Windows and Doors logo">
               </a>
               <a href="https://www.provia.com/" target="_blank" rel="noopener" aria-label="Visit ProVia">
-                <img src="/assets/provia-logo.png" alt="ProVia logo">
+                <img loading="lazy" decoding="async" src="/assets/provia-logo.png" alt="ProVia logo">
               </a>
             </div>
           </div>
@@ -196,14 +197,15 @@
             <a class="button button--primary" href="/contact/#quote">Start your project</a>
           </div>
           <div class="video-frame">
-            <video
-              controls
-              preload="metadata"
-              poster="/assets/gallery/just-windows-content-home-02-1920w-1-e1714687004282.webp"
+            <button
+              class="video-load"
+              type="button"
+              data-video-src="/assets/just-windows-7013268592.mp4"
+              data-video-poster="/assets/gallery/just-windows-content-home-02-1920w-1-e1714687004282.webp"
             >
-              <source src="/assets/just-windows-7013268592.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+              <img loading="lazy" decoding="async" src="/assets/gallery/just-windows-content-home-02-1920w-1-e1714687004282.webp" alt="Preview of Just Windows USA project video">
+              <span>Play project video</span>
+            </button>
           </div>
         </div>
       </section>
@@ -349,14 +351,14 @@
           </div>
           <div class="gallery-grid">
             <figure class="gallery-main">
-              <img src="/assets/gallery/just-windows-content-home-02-1920w-1-e1714687004282.webp" alt="Home exterior with updated windows and entry door">
+              <img loading="lazy" decoding="async" src="/assets/gallery/just-windows-content-home-02-1920w-1-e1714687004282.webp" alt="Home exterior with updated windows and entry door">
               <figcaption>Window and door upgrades for everyday curb appeal.</figcaption>
             </figure>
             <figure>
-              <img src="/assets/gallery/just-windows-home-support-3-1920w-1-e1714687106227.webp" alt="Modern home exterior window detail">
+              <img loading="lazy" decoding="async" src="/assets/gallery/just-windows-home-support-3-1920w-1-e1714687106227.webp" alt="Modern home exterior window detail">
             </figure>
             <figure>
-              <img src="/assets/gallery/just-windows-content-home-01-1920w-1-e1714686945999.webp" alt="Large home exterior with bright replacement windows">
+              <img loading="lazy" decoding="async" src="/assets/gallery/just-windows-content-home-01-1920w-1-e1714686945999.webp" alt="Large home exterior with bright replacement windows">
             </figure>
           </div>
         </div>
@@ -416,7 +418,7 @@
 
     <footer class="footer">
       <div class="container footer__inner">
-        <img src="/assets/just-windows-logo-516w.webp" alt="Just Windows USA logo" width="210" height="75">
+        <img loading="lazy" decoding="async" src="/assets/just-windows-logo-516w.webp" alt="Just Windows USA logo" width="210" height="75">
         <div>
           <p>Window, patio door, and entry door specialists serving Mentor, OH.</p>
           <p class="fine-print">Copyright <span data-year></span> Just Windows USA. All rights reserved.</p>
