@@ -1,0 +1,51 @@
+{
+  "routes": [
+    {
+      "route": "/windows/",
+      "rewrite": "/windows.html"
+    },
+    {
+      "route": "/window-installation/",
+      "rewrite": "/window-installation.html"
+    },
+    {
+      "route": "/home-windows/",
+      "rewrite": "/home-windows.html"
+    },
+    {
+      "route": "/double-hung-windows/",
+      "rewrite": "/double-hung-windows.html"
+    },
+    {
+      "route": "/doors/",
+      "rewrite": "/doors.html"
+    },
+    {
+      "route": "/gallery/",
+      "rewrite": "/gallery.html"
+    },
+    {
+      "route": "/reviews/",
+      "rewrite": "/reviews.html"
+    },
+    {
+      "route": "/about/",
+      "rewrite": "/about.html"
+    },
+    {
+      "route": "/contact/",
+      "rewrite": "/contact.html"
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/assets/*", "/*.css", "/*.js", "/*.json", "/*.webp", "/*.png", "/*.jpg", "/*.svg"]
+  },
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  },
+  "mimeTypes": {
+    ".webp": "image/webp"
+  }
+}
