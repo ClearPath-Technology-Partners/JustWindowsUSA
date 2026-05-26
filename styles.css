@@ -1265,6 +1265,7 @@ cite {
 
   .nav {
     min-height: 78px;
+    position: relative;
   }
 
   .nav-toggle {
@@ -1273,8 +1274,8 @@ cite {
 
   .nav-menu {
     position: absolute;
-    left: 20px;
-    right: 20px;
+    left: 0;
+    right: 0;
     top: calc(100% + 8px);
     display: none;
     flex-direction: column;
@@ -1285,6 +1286,7 @@ cite {
     border: 1px solid var(--line);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+    z-index: 100;
   }
 
   .nav-menu.is-open {
