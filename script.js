@@ -22,17 +22,53 @@ if (navToggle && navMenu) {
   });
 }
 
+const WEBHOOK_URL = "https://hook.us2.make.com/28cg2mxxubr5tqvuagcyg2nh4aj1sq3j";
+
 quoteForms.forEach((quoteForm) => {
-  quoteForm.addEventListener("submit", (event) => {
+  quoteForm.addEventListener("submit", async (event) => {
     const formNote = quoteForm.querySelector("[data-form-note]");
+    const submitBtn = quoteForm.querySelector("button[type=submit]");
 
     event.preventDefault();
+
+    if (submitBtn) submitBtn.disabled = true;
     if (formNote) {
-      formNote.textContent =
-        "Thanks. Please call (440) 668-4065 to confirm your appointment while this static form is connected to Azure.";
+      formNote.textContent = "Sending your request…";
       formNote.setAttribute("role", "status");
     }
-    quoteForm.reset();
+
+    const data = {
+      name: quoteForm.querySelector("[name=name]")?.value || "",
+      phone: quoteForm.querySelector("[name=phone]")?.value || "",
+      email: quoteForm.querySelector("[name=email]")?.value || "",
+      project: quoteForm.querySelector("[name=project]")?.value || "",
+      message: quoteForm.querySelector("[name=message]")?.value || "",
+      submittedAt: new Date().toISOString(),
+      source: window.location.href,
+    };
+
+    try {
+      const res = await fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error("Network response was not ok");
+
+      if (formNote) {
+        formNote.textContent =
+          "Thanks! We received your request and you'll hear from us shortly. For urgent questions call (440) 668-4065.";
+      }
+      quoteForm.reset();
+    } catch {
+      if (formNote) {
+        formNote.textContent =
+          "Something went wrong. Please call us at (440) 668-4065 and we'll get you a quote right away.";
+      }
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
+    }
   });
 });
 
