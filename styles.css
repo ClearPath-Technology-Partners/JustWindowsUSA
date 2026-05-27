@@ -1273,10 +1273,10 @@ cite {
   }
 
   .nav-menu {
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
-    top: calc(100% + 8px);
+    top: var(--header-h, 117px);
     display: none;
     flex-direction: column;
     align-items: stretch;
@@ -1286,7 +1286,7 @@ cite {
     border: 1px solid var(--line);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    z-index: 100;
+    z-index: 200;
   }
 
   .nav-menu.is-open {
