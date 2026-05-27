@@ -115,15 +115,17 @@
               Email
               <input type="email" name="email" autocomplete="email" required>
             </label>
+            <fieldset class="check-group">
+              <legend>Services needed</legend>
+              <div class="check-options">
+                <label class="check-label"><input type="checkbox" name="services" value="Windows"> Windows</label>
+                <label class="check-label"><input type="checkbox" name="services" value="Doors"> Doors</label>
+                <label class="check-label"><input type="checkbox" name="services" value="Siding"> Siding</label>
+              </div>
+            </fieldset>
             <label>
-              Project type
-              <select name="project" required>
-                <option value="">Select one</option>
-                <option>Window replacement</option>
-                <option>Door installation</option>
-                <option>Windows and doors</option>
-                <option>Other</option>
-              </select>
+              Project details
+              <textarea name="message" placeholder="Describe your project..."></textarea>
             </label>
             <button class="button button--primary" type="submit">Request my quote</button>
             <p class="form-note" data-form-note>Open Monday through Saturday, 8:00 am to 5:00 pm.</p>

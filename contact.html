@@ -81,7 +81,14 @@
               <label>Name<input type="text" name="name" autocomplete="name" required></label>
               <label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
               <label>Email<input type="email" name="email" autocomplete="email"></label>
-              <label>Project type<select name="project" required><option value="">Select one</option><option>Windows</option><option>Doors</option><option>Windows and doors</option><option>Other</option></select></label>
+              <fieldset class="check-group">
+                <legend>Services needed</legend>
+                <div class="check-options">
+                  <label class="check-label"><input type="checkbox" name="services" value="Windows"> Windows</label>
+                  <label class="check-label"><input type="checkbox" name="services" value="Doors"> Doors</label>
+                  <label class="check-label"><input type="checkbox" name="services" value="Siding"> Siding</label>
+                </div>
+              </fieldset>
               <label>Project details<textarea name="message" placeholder="Tell us what you would like replaced or installed."></textarea></label>
               <button class="button button--primary" type="submit">Send request</button>
               <p class="form-note" data-form-note>All fields marked with * are required.</p>
