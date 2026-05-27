@@ -115,14 +115,20 @@
               Email
               <input type="email" name="email" autocomplete="email" required>
             </label>
-            <fieldset class="check-group">
-              <legend>Services needed</legend>
-              <div class="check-options">
-                <label class="check-label"><input type="checkbox" name="services" value="Windows"> Windows</label>
-                <label class="check-label"><input type="checkbox" name="services" value="Doors"> Doors</label>
-                <label class="check-label"><input type="checkbox" name="services" value="Siding"> Siding</label>
+            <label>
+              Services needed
+              <div class="multi-select" data-multi-select>
+                <button type="button" class="multi-select__trigger" aria-expanded="false">
+                  <span data-multi-label>Select services</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="multi-select__panel" hidden>
+                  <label class="multi-select__opt"><input type="checkbox" name="services" value="Windows"> Windows</label>
+                  <label class="multi-select__opt"><input type="checkbox" name="services" value="Doors"> Doors</label>
+                  <label class="multi-select__opt"><input type="checkbox" name="services" value="Siding"> Siding</label>
+                </div>
               </div>
-            </fieldset>
+            </label>
             <label>
               Project details
               <textarea name="message" placeholder="Describe your project..."></textarea>
