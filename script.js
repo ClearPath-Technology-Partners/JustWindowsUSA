@@ -1,11 +1,20 @@
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
+const siteHeader = document.querySelector("[data-header]");
 const year = document.querySelector("[data-year]");
 const quoteForms = document.querySelectorAll(".quote-card, .quote-form");
 const videoLoads = document.querySelectorAll(".video-load");
 
 if (year) {
   year.textContent = new Date().getFullYear();
+}
+
+if (siteHeader) {
+  const setHeaderHeight = () => {
+    document.documentElement.style.setProperty("--header-h", siteHeader.offsetHeight + "px");
+  };
+  setHeaderHeight();
+  window.addEventListener("resize", setHeaderHeight);
 }
 
 if (navToggle && navMenu) {
