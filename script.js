@@ -81,33 +81,6 @@ quoteForms.forEach((quoteForm) => {
   });
 });
 
-document.querySelectorAll("[data-multi-select]").forEach((el) => {
-  const trigger = el.querySelector(".multi-select__trigger");
-  const panel = el.querySelector(".multi-select__panel");
-  const labelEl = el.querySelector("[data-multi-label]");
-  const checkboxes = el.querySelectorAll("input[type=checkbox]");
-
-  function updateLabel() {
-    const selected = Array.from(checkboxes).filter(cb => cb.checked).map(cb => cb.value);
-    labelEl.textContent = selected.length ? selected.join(", ") : "Select services";
-  }
-
-  trigger.addEventListener("click", () => {
-    const expanded = trigger.getAttribute("aria-expanded") === "true";
-    trigger.setAttribute("aria-expanded", String(!expanded));
-    panel.hidden = expanded;
-  });
-
-  checkboxes.forEach(cb => cb.addEventListener("change", updateLabel));
-
-  document.addEventListener("click", (e) => {
-    if (!el.contains(e.target)) {
-      trigger.setAttribute("aria-expanded", "false");
-      panel.hidden = true;
-    }
-  });
-});
-
 videoLoads.forEach((videoLoad) => {
   videoLoad.addEventListener("click", () => {
     const videoSrc = videoLoad.getAttribute("data-video-src");

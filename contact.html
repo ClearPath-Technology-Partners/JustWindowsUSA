@@ -81,19 +81,12 @@
               <label>Name<input type="text" name="name" autocomplete="name" required></label>
               <label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
               <label>Email<input type="email" name="email" autocomplete="email"></label>
-              <label>Services needed
-                <div class="multi-select" data-multi-select>
-                  <button type="button" class="multi-select__trigger" aria-expanded="false">
-                    <span data-multi-label>Select services</span>
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                  </button>
-                  <div class="multi-select__panel" hidden>
-                    <label class="multi-select__opt"><input type="checkbox" name="services" value="Windows"> Windows</label>
-                    <label class="multi-select__opt"><input type="checkbox" name="services" value="Doors"> Doors</label>
-                    <label class="multi-select__opt"><input type="checkbox" name="services" value="Siding"> Siding</label>
-                  </div>
-                </div>
-              </label>
+              <p class="form-label">Services needed</p>
+              <div class="service-pills">
+                <label class="service-pill"><input type="checkbox" name="services" value="Windows"><span>Windows</span></label>
+                <label class="service-pill"><input type="checkbox" name="services" value="Doors"><span>Doors</span></label>
+                <label class="service-pill"><input type="checkbox" name="services" value="Siding"><span>Siding</span></label>
+              </div>
               <label>Project details<textarea name="message" placeholder="Tell us what you would like replaced or installed."></textarea></label>
               <button class="button button--primary" type="submit">Send request</button>
               <p class="form-note" data-form-note>All fields marked with * are required.</p>
