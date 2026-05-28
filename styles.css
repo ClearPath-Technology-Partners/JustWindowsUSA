@@ -177,15 +177,9 @@ select {
   cursor: pointer;
 }
 
-.nav-toggle__bars span {
+.nav-toggle svg {
   display: block;
-  width: 22px;
-  height: 2px;
-  background: var(--blue-950);
-}
-
-.nav-toggle__bars span + span {
-  margin-top: 5px;
+  color: var(--blue-950);
 }
 
 .hero {
@@ -1337,15 +1331,8 @@ cite {
   }
 
   .nav-toggle {
-    display: block;
-  }
-
-  .nav-toggle__bars {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 22px;
+    display: grid;
+    place-items: center;
   }
 
   .nav-menu {
