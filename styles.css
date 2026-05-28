@@ -167,20 +167,20 @@ select {
 
 .nav-toggle {
   display: none;
-  width: 46px;
-  height: 46px;
-  padding: 10px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--paper);
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
   cursor: pointer;
 }
 
-.nav-toggle span:not(.sr-only) {
-  width: 100%;
-  height: 2px;
-  margin: 5px 0;
-  background: var(--blue-950);
+.nav-toggle svg {
+  display: block;
+  width: 44px;
+  height: 44px;
 }
 
 .hero {
@@ -353,7 +353,8 @@ h3 {
 }
 
 .quote-card input,
-.quote-card select {
+.quote-card select,
+.quote-card textarea {
   width: 100%;
   min-height: 48px;
   padding: 0 12px;
@@ -361,12 +362,74 @@ h3 {
   background: var(--soft);
   border: 1px solid var(--line);
   border-radius: var(--radius);
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.quote-card textarea {
+  min-height: 76px;
+  padding: 10px 12px;
+  resize: vertical;
 }
 
 .quote-card input:focus,
-.quote-card select:focus {
+.quote-card select:focus,
+.quote-card textarea:focus {
   outline: 3px solid rgba(255, 230, 0, 0.52);
   border-color: var(--blue-700);
+}
+
+.form-label {
+  margin-bottom: 8px;
+  color: var(--blue-950);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.service-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.quote-card .service-pill,
+.quote-form .service-pill {
+  position: relative !important;
+  display: inline-flex !important;
+  gap: 0 !important;
+  margin-bottom: 0 !important;
+  cursor: pointer;
+}
+
+.quote-card .service-pill input[type="checkbox"],
+.quote-form .service-pill input[type="checkbox"] {
+  position: absolute !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  pointer-events: none;
+}
+
+.service-pill span {
+  display: block;
+  padding: 10px 18px;
+  color: var(--blue-950);
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.service-pill input:checked + span {
+  background: var(--yellow);
+  border-color: var(--blue-950);
 }
 
 .quote-card .button {
@@ -600,25 +663,25 @@ h3 {
   box-shadow: 0 18px 44px rgba(5, 22, 83, 0.14);
 }
 
-.icon {
-  width: 50px;
-  height: 50px;
-  display: grid;
-  place-items: center;
-  margin-bottom: 22px;
-  color: var(--blue-950);
-  background: var(--yellow);
-  border-radius: var(--radius);
+.service-card__photo {
+  width: calc(100% + 56px);
+  margin: -28px -28px 22px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 
-.icon svg {
-  width: 27px;
-  height: 27px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.service-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 300ms ease;
+}
+
+.service-card:hover .service-card__photo img {
+  transform: scale(1.04);
 }
 
 .service-card p {
@@ -1269,7 +1332,7 @@ cite {
   }
 
   .nav-toggle {
-    display: grid;
+    display: block;
   }
 
   .nav-menu {
