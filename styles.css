@@ -170,9 +170,8 @@ select {
   width: 44px;
   height: 44px;
   padding: 0;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--paper);
+  border: 0;
+  background: transparent;
   cursor: pointer;
 }
 
