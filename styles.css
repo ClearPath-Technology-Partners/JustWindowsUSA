@@ -167,19 +167,14 @@ select {
 
 .nav-toggle {
   display: none;
-  position: relative;
-  width: 44px;
-  height: 44px;
   padding: 0;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--paper);
+  border: 0;
+  background: transparent;
   cursor: pointer;
 }
 
 .nav-toggle svg {
   display: block;
-  color: var(--blue-950);
 }
 
 .hero {
@@ -1331,8 +1326,7 @@ cite {
   }
 
   .nav-toggle {
-    display: grid;
-    place-items: center;
+    display: block;
   }
 
   .nav-menu {
