@@ -1337,11 +1337,10 @@ cite {
   }
 
   .nav-toggle__bars {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
+    display: grid;
+    grid-template-rows: 2px 2px 2px;
+    row-gap: 5px;
+    width: 22px;
   }
 
   .nav-menu {
