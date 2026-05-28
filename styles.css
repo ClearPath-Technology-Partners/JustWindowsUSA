@@ -167,14 +167,19 @@ select {
 
 .nav-toggle {
   display: none;
+  width: 44px;
+  height: 44px;
   padding: 0;
-  border: 0;
-  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
   cursor: pointer;
 }
 
 .nav-toggle svg {
   display: block;
+  width: 44px;
+  height: 44px;
 }
 
 .hero {
