@@ -177,9 +177,9 @@ select {
 }
 
 .nav-toggle span:not(.sr-only) {
-  width: 100%;
+  display: block;
+  width: 22px;
   height: 2px;
-  margin: 5px 0;
   background: var(--blue-950);
 }
 
@@ -1332,7 +1332,11 @@ cite {
   }
 
   .nav-toggle {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
   }
 
   .nav-menu {
