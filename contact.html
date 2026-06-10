@@ -80,11 +80,11 @@
             <form class="quote-form" aria-label="Request a quote form">
               <label>Name<input type="text" name="name" autocomplete="name" required></label>
               <label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
-              <label>Email<input type="email" name="email" autocomplete="email"></label>
+              <label>Email<input type="email" name="email" autocomplete="email" required></label>
               <label>Project type<select name="project" required><option value="">Select one</option><option>Windows</option><option>Doors</option><option>Windows and doors</option><option>Other</option></select></label>
-              <label>Project details<textarea name="message" placeholder="Tell us what you would like replaced or installed."></textarea></label>
+              <label>Project details<textarea name="message" placeholder="Tell us what you would like replaced or installed." required></textarea></label>
               <button class="button button--primary" type="submit">Send request</button>
-              <p class="form-note" data-form-note>All fields marked with * are required.</p>
+              <p class="form-note" data-form-note>All fields are required.</p>
             </form>
           </div>
 
