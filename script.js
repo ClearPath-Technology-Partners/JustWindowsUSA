@@ -50,7 +50,7 @@ quoteForms.forEach((quoteForm) => {
       name: quoteForm.querySelector("[name=name]")?.value || "",
       phone: quoteForm.querySelector("[name=phone]")?.value || "",
       email: quoteForm.querySelector("[name=email]")?.value || "",
-      project: quoteForm.querySelector("[name=project]")?.value || "",
+      project: Array.from(quoteForm.querySelectorAll("[name=services]:checked")).map(cb => cb.value).join(", ") || "",
       message: quoteForm.querySelector("[name=message]")?.value || "",
       submittedAt: new Date().toISOString(),
       source: window.location.href,

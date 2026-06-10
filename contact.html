@@ -9,8 +9,8 @@
     <title>Free Window &amp; Door Quotes in Mentor, OH | Just Windows USA</title>
     <meta name="description" content="Request a replacement window quote or door installation quote from Just Windows USA in Mentor, OH. Free quotes for windows, entry doors, and patio doors.">
     <link rel="canonical" href="https://just-windows-usa.vercel.app/contact/">
-    <link rel="stylesheet" href="/styles.min.css?v=2">
-    <script defer src="/script.min.js?v=2"></script>
+    <link rel="stylesheet" href="/styles.min.css?v=4">
+    <script defer src="/script.min.js?v=4"></script>
     <script type="application/ld+json">
       {
               "@context": "https://schema.org",
@@ -44,7 +44,7 @@
       <div class="topbar"><div class="container topbar__inner"><span>Family and locally owned since 1992</span><span>Free quotes</span><a href="tel:+14406684065">Call (440) 668-4065</a></div></div>
       <nav class="nav container" aria-label="Primary navigation">
         <a class="brand" href="/" aria-label="Just Windows USA home"><img src="/assets/just-windows-logo-516w.webp" alt="Just Windows USA logo" width="258" height="92"></a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"><span class="sr-only">Open menu</span><span></span><span></span><span></span></button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"><span class="sr-only">Open menu</span><svg viewBox="0 0 44 44" width="44" height="44" aria-hidden="true" fill="none"><rect x="0.5" y="0.5" width="43" height="43" rx="8" fill="white" stroke="#d7deea"/><line x1="11" y1="15" x2="33" y2="15" stroke="#051653" stroke-width="2" stroke-linecap="round"/><line x1="11" y1="22" x2="33" y2="22" stroke="#051653" stroke-width="2" stroke-linecap="round"/><line x1="11" y1="29" x2="33" y2="29" stroke="#051653" stroke-width="2" stroke-linecap="round"/></svg></button>
         <div class="nav-menu" id="nav-menu"><a href="/">Home</a><a href="/windows/">Windows</a><a href="/doors/">Doors</a><a href="/gallery/">Gallery</a><a href="/reviews/">Reviews</a><a href="/about/">About</a><a href="/contact/" aria-current="page">Contact</a><a class="nav-cta" href="#quote">Request quote</a></div>
       </nav>
     </header>
@@ -80,9 +80,14 @@
             <form class="quote-form" aria-label="Request a quote form">
               <label>Name<input type="text" name="name" autocomplete="name" required></label>
               <label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
-              <label>Email<input type="email" name="email" autocomplete="email" required></label>
-              <label>Project type<select name="project" required><option value="">Select one</option><option>Windows</option><option>Doors</option><option>Windows and doors</option><option>Other</option></select></label>
-              <label>Project details<textarea name="message" placeholder="Tell us what you would like replaced or installed." required></textarea></label>
+              <label>Email<input type="email" name="email" autocomplete="email"></label>
+              <p class="form-label">Services needed</p>
+              <div class="service-pills">
+                <label class="service-pill"><input type="checkbox" name="services" value="Windows"><span>Windows</span></label>
+                <label class="service-pill"><input type="checkbox" name="services" value="Doors"><span>Doors</span></label>
+                <label class="service-pill"><input type="checkbox" name="services" value="Siding"><span>Siding</span></label>
+              </div>
+              <label>Project details<textarea name="message" placeholder="Tell us what you would like replaced or installed."></textarea></label>
               <button class="button button--primary" type="submit">Send request</button>
               <p class="form-note" data-form-note>All fields are required.</p>
             </form>
@@ -113,3 +118,5 @@
     <footer class="footer"><div class="container footer__inner"><img src="/assets/just-windows-logo-516w.webp" alt="Just Windows USA logo" width="210" height="75"><div><p>Window, patio door, and entry door specialists serving Mentor, OH.</p><p class="fine-print">Copyright <span data-year></span> Just Windows USA. All rights reserved.</p></div></div></footer>
   </body>
 </html>
+
+

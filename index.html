@@ -14,8 +14,8 @@
     <link rel="canonical" href="https://just-windows-usa.vercel.app/">
     <link rel="preload" href="/assets/gallery/just-windows-content-home-02-1920w-1-e1714687004282.webp" as="image" media="(max-width: 700px)" fetchpriority="high">
     <link rel="preload" href="/assets/gallery/just-windows-content-home-01-1920w-1-e1714686945999.webp" as="image" media="(min-width: 701px)" fetchpriority="high">
-    <link rel="stylesheet" href="/styles.min.css?v=2">
-    <script defer src="/script.min.js?v=2"></script>
+    <link rel="stylesheet" href="/styles.min.css?v=4">
+    <script defer src="/script.min.js?v=4"></script>
     <script type="application/ld+json">
       {
               "@context": "https://schema.org",
@@ -59,12 +59,7 @@
         <a class="brand" href="/" aria-label="Just Windows USA home">
           <img src="/assets/just-windows-logo-516w.webp" alt="Just Windows USA logo" width="258" height="92">
         </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
-          <span class="sr-only">Open menu</span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"><span class="sr-only">Open menu</span><svg viewBox="0 0 44 44" width="44" height="44" aria-hidden="true" fill="none"><rect x="0.5" y="0.5" width="43" height="43" rx="8" fill="white" stroke="#d7deea"/><line x1="11" y1="15" x2="33" y2="15" stroke="#051653" stroke-width="2" stroke-linecap="round"/><line x1="11" y1="22" x2="33" y2="22" stroke="#051653" stroke-width="2" stroke-linecap="round"/><line x1="11" y1="29" x2="33" y2="29" stroke="#051653" stroke-width="2" stroke-linecap="round"/></svg></button>
         <div class="nav-menu" id="nav-menu">
           <a href="/" aria-current="page">Home</a>
           <a href="/windows/">Windows</a>
@@ -115,15 +110,15 @@
               Email
               <input type="email" name="email" autocomplete="email" required>
             </label>
+            <p class="form-label">Services needed</p>
+            <div class="service-pills">
+              <label class="service-pill"><input type="checkbox" name="services" value="Windows"><span>Windows</span></label>
+              <label class="service-pill"><input type="checkbox" name="services" value="Doors"><span>Doors</span></label>
+              <label class="service-pill"><input type="checkbox" name="services" value="Siding"><span>Siding</span></label>
+            </div>
             <label>
-              Project type
-              <select name="project" required>
-                <option value="">Select one</option>
-                <option>Window replacement</option>
-                <option>Door installation</option>
-                <option>Windows and doors</option>
-                <option>Other</option>
-              </select>
+              Project details
+              <textarea name="message" placeholder="Describe your project..."></textarea>
             </label>
             <button class="button button--primary" type="submit">Request my quote</button>
             <p class="form-note" data-form-note>Open Monday through Saturday, 8:00 am to 5:00 pm.</p>
@@ -152,11 +147,80 @@
         </div>
       </section>
 
+      <section class="section section--intro" id="services">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Services</p>
+            <h2>Replacement windows, exterior doors, and expert guidance.</h2>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="service-card__photo">
+                <img loading="lazy" decoding="async" src="/assets/gallery/just-windows-gallery-10-1920w.webp" alt="Home exterior with new replacement windows installed by Just Windows USA">
+              </div>
+              <h3>Replacement windows and home windows</h3>
+              <p>
+                Replacement windows selected for your house, your budget, and Northeast Ohio weather,
+                including double hung windows, single hung windows, and energy efficient options.
+              </p>
+              <a href="/windows/">Plan window replacement</a>
+            </article>
+            <article class="service-card">
+              <div class="service-card__photo">
+                <img loading="lazy" decoding="async" src="/assets/gallery/just-windows-gallery-22-1920w.webp" alt="Home exterior with new entry door installed by Just Windows USA">
+              </div>
+              <h3>Entry doors, patio doors, and replacement doors</h3>
+              <p>
+                Door products and installation that improve security, daily use, and curb appeal.
+              </p>
+              <a href="/doors/">Talk about doors</a>
+            </article>
+            <article class="service-card">
+              <div class="service-card__photo">
+                <img loading="lazy" decoding="async" src="/assets/gallery/just-windows-gallery-25-1920w.webp" alt="Home exterior showing completed window and door replacement by Just Windows USA">
+              </div>
+              <h3>Window and door replacement quotes</h3>
+              <p>
+                Clear recommendations, upfront pricing, free estimates, and customer service that
+                keeps the process moving.
+              </p>
+              <a href="/contact/">Ask a question</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section video-section" aria-label="Just Windows USA video">
+        <div class="container video-feature">
+          <div class="video-feature__copy">
+            <p class="eyebrow">See the team in action</p>
+            <h2>Professional window and door installation, up close.</h2>
+            <p>
+              Watch how Just Windows USA approaches residential window replacement and door
+              installation with the kind of careful work and straightforward service homeowners
+              expect from a local crew.
+            </p>
+            <a class="button button--primary" href="/contact/#quote">Start your project</a>
+          </div>
+          <div class="video-frame">
+            <button
+              class="video-load"
+              type="button"
+              data-video-src="/assets/just-windows-7013268592.mp4"
+              data-video-poster="/assets/gallery/just-windows-content-home-02-1920w-1-e1714687004282.webp"
+            >
+              <img loading="lazy" decoding="async" src="/assets/gallery/just-windows-content-home-02-1920w-1-e1714687004282.webp" alt="Preview of Just Windows USA project video">
+              <span>Play project video</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
       <section class="section section--intro">
         <div class="container split">
           <div>
             <p class="eyebrow">Built around trust</p>
-            <h2>Your local window company for home windows, patio doors, and entry doors.</h2>
+            <h2>Local window and door specialists since 1992.</h2>
           </div>
           <div class="intro-copy">
             <p>
@@ -184,80 +248,11 @@
         </div>
       </section>
 
-      <section class="section video-section" aria-label="Just Windows USA video">
-        <div class="container video-feature">
-          <div class="video-feature__copy">
-            <p class="eyebrow">See the team in action</p>
-            <h2>A closer look at professional window installation and door replacement work.</h2>
-            <p>
-              Watch how Just Windows USA approaches residential window replacement and door
-              installation with the kind of careful work and straightforward service homeowners
-              expect from a local crew.
-            </p>
-            <a class="button button--primary" href="/contact/#quote">Start your project</a>
-          </div>
-          <div class="video-frame">
-            <button
-              class="video-load"
-              type="button"
-              data-video-src="/assets/just-windows-7013268592.mp4"
-              data-video-poster="/assets/gallery/just-windows-content-home-02-1920w-1-e1714687004282.webp"
-            >
-              <img loading="lazy" decoding="async" src="/assets/gallery/just-windows-content-home-02-1920w-1-e1714687004282.webp" alt="Preview of Just Windows USA project video">
-              <span>Play project video</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="services">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Services</p>
-            <h2>Window replacement, exterior doors, and project guidance without the guesswork.</h2>
-          </div>
-          <div class="service-grid">
-            <article class="service-card">
-              <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"></path><path d="M12 4v16M4 12h16"></path></svg>
-              </div>
-              <h3>Replacement windows and home windows</h3>
-              <p>
-                Replacement windows selected for your house, your budget, and Northeast Ohio weather,
-                including double hung windows, single hung windows, and energy efficient options.
-              </p>
-              <a href="/windows/">Plan window replacement</a>
-            </article>
-            <article class="service-card">
-              <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M7 3h10v18H7z"></path><path d="M15 12h.01"></path></svg>
-              </div>
-              <h3>Entry doors, patio doors, and replacement doors</h3>
-              <p>
-                Door products and installation that improve security, daily use, and curb appeal.
-              </p>
-              <a href="/doors/">Talk about doors</a>
-            </article>
-            <article class="service-card">
-              <div class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"></path></svg>
-              </div>
-              <h3>Window and door replacement quotes</h3>
-              <p>
-                Clear recommendations, upfront pricing, free estimates, and customer service that
-                keeps the process moving.
-              </p>
-              <a href="/contact/">Ask a question</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section class="section" id="window-options">
         <div class="container split">
           <div>
             <p class="eyebrow">Window installation options</p>
-            <h2>Energy efficient windows, strong window frames, and styles that fit your home.</h2>
+            <h2>Energy efficient windows in styles built for your home.</h2>
           </div>
           <div class="intro-copy">
             <p>
@@ -287,7 +282,7 @@
           <div class="why-grid">
             <div>
               <p class="eyebrow eyebrow--light">Why homeowners choose Just Windows</p>
-              <h2>Professional window installation from a local team that keeps it simple.</h2>
+              <h2>Local expertise. Professional installation. Simple process.</h2>
               <p>
                 Better windows and doors should make the whole house feel easier to live in.
                 Just Windows USA brings fast, friendly customer service and practical guidance for
@@ -321,7 +316,7 @@
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">How it works</p>
-            <h2>A clean process from first call to finished window or door installation.</h2>
+            <h2>From free quote to finished installation.</h2>
           </div>
           <div class="process">
             <article>
@@ -347,7 +342,7 @@
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Project inspiration</p>
-            <h2>See how window and door replacement can refresh your home.</h2>
+            <h2>Window and door replacements that transform your home.</h2>
           </div>
           <div class="gallery-grid">
             <figure class="gallery-main">
@@ -427,3 +422,5 @@
     </footer>
   </body>
 </html>
+
+
