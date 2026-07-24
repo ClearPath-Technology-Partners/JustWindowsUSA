@@ -641,6 +641,12 @@ h3 {
   margin-bottom: 34px;
 }
 
+.section-heading--center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 .service-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1132,16 +1138,28 @@ blockquote {
 }
 
 .about-photo {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  background: var(--soft);
 }
 
 .about-photo img {
+  flex: 1 1 auto;
   width: 100%;
   height: 100%;
   min-height: 360px;
   object-fit: cover;
+}
+
+.about-photo figcaption {
+  padding: 14px 18px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+  text-align: center;
 }
 
 .details-grid {
@@ -1298,10 +1316,28 @@ cite {
   gap: 28px;
 }
 
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  flex: 0 1 auto;
+  width: min(400px, 100%);
+}
+
 .footer img {
   width: 210px;
   height: auto;
   background: #000;
+}
+
+.footer__map {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  border: 0;
+  border-radius: var(--radius);
 }
 
 .footer p {
@@ -1551,6 +1587,42 @@ cite {
   }
 }
 
+/* Facebook post embed (fixed 500px plugin, scaled to fit its container) */
+.fb-embed {
+  --fb-scale: 1;
+  max-width: 500px;
+  height: calc(763px * var(--fb-scale));
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.fb-embed__frame {
+  display: block;
+  width: 500px;
+  height: 763px;
+  border: 0;
+  overflow: hidden;
+  transform: scale(var(--fb-scale));
+  transform-origin: top left;
+}
+
+/* Scroll reveal. The hidden state is gated on .anim-ready, which a small inline
+   script in each page head adds only when IntersectionObserver is supported, so
+   content is never stranded invisible if JS is blocked or unsupported. Uses the
+   independent `translate` property rather than `transform` so it cannot collide
+   with the hover transforms on .button, .service-card, .badge-row a, etc. */
+.anim-ready .reveal {
+  opacity: 0;
+  translate: 0 20px;
+  transition: opacity 620ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    translate 620ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.anim-ready .reveal.is-visible {
+  opacity: 1;
+  translate: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -1559,5 +1631,10 @@ cite {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+
+  .anim-ready .reveal {
+    opacity: 1 !important;
+    translate: none !important;
   }
 }
