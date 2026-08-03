@@ -11,7 +11,8 @@
     { "source": "/gallery.html", "destination": "/gallery/", "permanent": true },
     { "source": "/reviews.html", "destination": "/reviews/", "permanent": true },
     { "source": "/about.html", "destination": "/about/", "permanent": true },
-    { "source": "/contact.html", "destination": "/contact/", "permanent": true }
+    { "source": "/contact.html", "destination": "/contact/", "permanent": true },
+    { "source": "/privacy.html", "destination": "/privacy/", "permanent": true }
   ],
   "rewrites": [
     { "source": "/windows/", "destination": "/windows.html" },
@@ -22,7 +23,8 @@
     { "source": "/gallery/", "destination": "/gallery.html" },
     { "source": "/reviews/", "destination": "/reviews.html" },
     { "source": "/about/", "destination": "/about.html" },
-    { "source": "/contact/", "destination": "/contact.html" }
+    { "source": "/contact/", "destination": "/contact.html" },
+    { "source": "/privacy/", "destination": "/privacy.html" }
   ],
   "headers": [
     {

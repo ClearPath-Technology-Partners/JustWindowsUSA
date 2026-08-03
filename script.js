@@ -114,16 +114,18 @@ if (document.documentElement.classList.contains("anim-ready")) {
   document.querySelectorAll(REVEAL_SINGLES).forEach((el) => observeReveal(el, 0));
 }
 
-// Facebook post plugin renders at a fixed 500px width, so scale it to fit its container.
-const fbEmbed = document.querySelector(".fb-embed");
+// Facebook plugins render at a fixed 500px width, so scale each to fit its container.
+const fbEmbeds = document.querySelectorAll(".fb-embed");
 
-if (fbEmbed) {
+if (fbEmbeds.length) {
   const setFbScale = () => {
-    const available = fbEmbed.parentElement.clientWidth;
-    // Layout is not always resolved when this deferred script runs; a 0 here
-    // would scale the embed to nothing, so leave the CSS default of 1 in place.
-    if (!available) return;
-    fbEmbed.style.setProperty("--fb-scale", String(Math.min(1, available / 500)));
+    fbEmbeds.forEach((embed) => {
+      const available = embed.parentElement.clientWidth;
+      // Layout is not always resolved when this deferred script runs; a 0 here
+      // would scale the embed to nothing, so leave the CSS default of 1 in place.
+      if (!available) return;
+      embed.style.setProperty("--fb-scale", String(Math.min(1, available / 500)));
+    });
   };
   setFbScale();
   window.addEventListener("resize", setFbScale);

@@ -2,3 +2,5 @@
 
 .vercel
 .env*
+_qa.html
+.DS_Store
