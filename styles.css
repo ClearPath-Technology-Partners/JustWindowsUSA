@@ -461,6 +461,23 @@ h3 {
   font-size: 0.9rem;
 }
 
+.form-note.is-error {
+  color: var(--red);
+  font-weight: 700;
+}
+
+.quote-card input.is-invalid,
+.quote-card textarea.is-invalid,
+.quote-form input.is-invalid,
+.quote-form textarea.is-invalid {
+  background: #fff4f4;
+  border-color: var(--red);
+}
+
+.service-pills.is-invalid .service-pill span {
+  border-color: var(--red);
+}
+
 .trust-band {
   background: var(--yellow);
 }

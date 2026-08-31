@@ -24,8 +24,8 @@
     <meta name="twitter:description" content="Request a replacement window quote or door installation quote from Just Windows USA in Mentor, OH. Free quotes for windows, entry doors, and patio doors.">
     <meta name="twitter:image" content="https://just-windows-usa.vercel.app/assets/og-card.jpg">
     <script>if("IntersectionObserver" in window)document.documentElement.classList.add("anim-ready")</script>
-    <link rel="stylesheet" href="/styles.min.css?v=6">
-    <script defer src="/script.min.js?v=6"></script>
+    <link rel="stylesheet" href="/styles.min.css?v=7">
+    <script defer src="/script.min.js?v=7"></script>
     <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
@@ -99,9 +99,9 @@
             <form class="quote-form" aria-label="Request a quote form">
               <label>Name<input type="text" name="name" autocomplete="name" required></label>
               <label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
-              <label>Email<input type="email" name="email" autocomplete="email"></label>
-              <p class="form-label">Services needed</p>
-              <div class="service-pills">
+              <label>Email<input type="email" name="email" autocomplete="email" required></label>
+              <p class="form-label" id="services-label">Services needed <span aria-hidden="true">*</span></p>
+              <div class="service-pills" role="group" aria-labelledby="services-label" aria-required="true">
                 <label class="service-pill"><input type="checkbox" name="services" value="Windows"><span>Windows</span></label>
                 <label class="service-pill"><input type="checkbox" name="services" value="Doors"><span>Doors</span></label>
                 <label class="service-pill"><input type="checkbox" name="services" value="Siding"><span>Siding</span></label>
